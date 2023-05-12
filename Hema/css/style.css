@@ -26,7 +26,7 @@ a{
 /* Header */
 
 .header{
-    padding: 1rem 10rem 1rem 10rem;
+    padding: 1vh 10vh 1vh 10vh;
     width: 100%; 
     display: flex;
     align-items: center;
@@ -35,7 +35,7 @@ a{
 
 
 .logo{
-    height: 5.5rem;
+    height: 8vh;
 }
 
 .logo--link{
@@ -61,6 +61,7 @@ a{
 
 main{
     height: 200rem;
+    margin: 5vh;
 }
 
 .picture{
@@ -69,51 +70,96 @@ main{
     object-fit: cover;
 }
 
+.slogan{
+    position: absolute;
+    left: 10vh;
+    top: 20vh;
+    background: lightblue;
+    border-radius: 10px;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 26rem;
+}
 
 h1{
-    position: absolute;
-    left: 10rem;
-    top: 10rem;
-    font-size: 5rem;
+    font-size: 4rem;
     color: rgb(0, 0, 0);
 }
 
+.mainButton{
+    font-size: 4rem;
+    background: none;
+    color: white;
+    border: white solid .4rem;
+    border-radius: 1vh;
+    padding: 1rem;
+}
+
+.mainButton:hover{
+    transition: 0.5s;
+    background: white;
+    color: black;
+}
 
 
+
+
+li{
+    list-style: none;
+}
 
 .mid{
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     gap: 3rem;
 }
 
+.gridStyle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.grotePic{
+    height: 100%;
+    width: 100%;
+}
 
 .card--1{
-    grid-column: 1 / 2;
-    grid-row: 1 / 4;
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
 }
 .card--2{
-    grid-column: 2 / 3;
+    grid-column: 3 / 5;
     grid-row: 1 / 3;
 }
 .card--3{
-    grid-column: 1 / 3;
-    grid-row: 3 / 5;
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+}
+.card--4{
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+}
+.card--5{
+    grid-column: 3 / 4;
+    grid-row: 3 / 4;
+}
+.card--6{
+    grid-column: 4 / 5;
+    grid-row: 3 / 4;
 }
 
-.cards{
-    display: flex;
-    gap: 3rem;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}
 
 .card{
     position: relative;
-    height: 35rem;
-    width: 35rem;
+    width: 100%;
+    height: 100%;
     background: rgba(34, 40, 49, 0.8);
     list-style: none;
     border: 0.1rem solid rgba(255, 255, 255, 0.6);
