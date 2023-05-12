@@ -101,6 +101,7 @@ h1{
     transition: 0.5s;
     background: white;
     color: black;
+    cursor: pointer;
 }
 
 
@@ -162,5 +163,9 @@ li{
     height: 100%;
     background: rgba(34, 40, 49, 0.8);
     list-style: none;
-    border: 0.1rem solid rgba(255, 255, 255, 0.6);
+}
+
+.card > img{
+    height: 100%;
+    width: 100%;
 }
