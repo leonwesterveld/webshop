@@ -355,7 +355,7 @@ h5{
 }
 
 h5{
-    font-size: 2.6;
+    font-size: 3.8rem;
 }
 
 .bestel{
@@ -364,15 +364,16 @@ h5{
     font-weight: 500;
 }
 
-.bestel--1:hover{
-    cursor: pointer;
-    transition: .5s;
-    border-bottom: white solid 1px;
-
-}
-
 .ks{
     color: white;
+    border-bottom: white solid 1px;
+}
+
+.klant{
+    color: white;
+}
+
+.klant:hover{
     border-bottom: white solid 1px;
 }
 
