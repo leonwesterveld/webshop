@@ -340,12 +340,12 @@ h5{
 
 
 /* footer */
-.footer{
+.footer-purple{
     background: #9C1AFF;
     height: 20rem;
 }
 
-.vragen{
+.footer-purple > ul{
     margin: 0 20rem 0 20rem;
     display: flex;
     gap: 3rem;
@@ -364,7 +364,7 @@ h5{
     font-size: 3.8rem;
 }
 
-.bestel{
+.hulp > p{
     font-size: 1.5rem;
     color: white;
     font-weight: 500;
@@ -375,18 +375,18 @@ h5{
     border-bottom: white solid 1px;
 }
 
-.klant{
+.hulp > p > a{
     color: white;
 }
 
-.klant:hover{
+.hulp > p > a:hover{
     border-bottom: white solid 1px;
 }
 
 
 
 
-.map{
+.hulp > form{
     display: flex;
 }
 
@@ -419,7 +419,7 @@ h5{
 
 
 
-.socials{
+.footer-white{
     height: 20rem;
 }
 
@@ -427,16 +427,11 @@ h6{
     font-size: 2rem;
 }
 
-.icon{
+.footer-white > ul{
     margin: 0 20rem 0 20rem;
     display: flex;
     gap: 3rem;
     height: 100%;
-}
-
-.icons{
-    display: flex;
-    gap: 1rem;
 }
 
 .ico--1{
@@ -447,6 +442,10 @@ h6{
     padding: 3rem;
 }
 
+.ico--1 > ul{
+    display: flex;
+    gap: 1rem;
+}
 
 .ico--2{
     width: 100%;
@@ -456,13 +455,24 @@ h6{
     padding: 3rem;
 }
 
+.ico--2 > p{
+    font-size: 1.5rem;
+}
+
+.ico--2 > form > input{
+    padding: 1rem;
+    border: #d0cdc7 1px solid;
+}
+
+.ico--2 > form > button{
+    background: #d0cdc7;
+    border: none;
+    padding: 1rem;
+}
+
 .ico{
     height: 3rem;
     width: auto;
     border-radius: 8px;
     object-fit: fill;
-}
-
-.brief{
-    font-size: 1.5rem;
 }
