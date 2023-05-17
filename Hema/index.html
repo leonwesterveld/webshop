@@ -30,13 +30,15 @@
 
 
 
-    <figure class="box">
-        <img class="cover" src="img/cover.png" alt="">
-        <div class="slogan">
+    <article class="box">
+        <figure>
+            <img src="img/cover.png" alt="">
+        </figure>
+        <section class="slogan">
             <h1>"ik heb geen geld meer."</br>"dan ga je toch pinnen..."</h1>
             <button class="mainButton">koop nu</button>
-        </div>
-    </figure>
+        </section>
+    </article>
 
 
 
@@ -186,9 +188,9 @@
                 </li>
                 <li class="hulp">
                     <h5>vind een winkel</h5>
-                    <form action="https://www.google.com/maps/place/">
-                        <input type="text" name="q">
-                        <button>Search maps</button>
+                    <form class="map" action="https://www.google.com/maps/place/">
+                        <input class="plaats" type="text" name="q" placeholder="vul postcode of plaats in">
+                        <button class="glass"><i class="zoeken fa-solid fa-magnifying-glass"></i></button>
                     </form>
                 </li>
             </ul>
@@ -242,7 +244,12 @@
                     </ul>
                 </li>
                 <li class="ico--2">
-                    <h6>hallo</h6>
+                    <h6>nieuwsbrief</h6>
+                    <p class="brief">schrijf je in voor de nieuwsbrief en mis nooit meer iets. krijg direct bij je eerste bestelling 10% korting. </p>
+                    <form class="mail" action="https://mail.google.com/mail//">
+                        <input type="email" name="" required>
+                        <button>aanmelden</button>
+                    </form>
                 </li>
             </ul>
         </div>
