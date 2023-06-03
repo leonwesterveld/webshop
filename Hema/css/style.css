@@ -44,7 +44,7 @@ li {
     height: 100%;
     width: 85%;
     margin-left: 15%;
-    border-radius: 8px 0 0 8px;
+    border-radius: 0.8rem 0 0 0.8rem;
 }
 
 .box section{
@@ -113,7 +113,7 @@ main{
 
 .interessant{
     background: plum;
-    border-radius: 8px;
+    border-radius: 0.8rem;
     padding: 3rem;
     margin: 3rem;
     display: flex;
@@ -157,39 +157,40 @@ h2{
 .picas{
     font-family: sans-serif;
     font-size: 2rem;    
-    display: flex;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
     justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+    height: 100%;
     gap: 3rem;
-    flex-wrap: wrap;
+    margin: 5rem;
 }
 
 .product{
-    width: 30rem;
-    height: 50rem;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .product__figure{
-    height: 60%;
+    height: auto;
     width: 100%;
 }
 
 .product__image{
     height: 100%;
     width: 100%;
-    object-fit: contain;
+    object-fit: cover;
     border-radius: .8rem .8rem 0 0;
 }
 
 .product__section{
-    height: 40%;
     width: 100%;
     display: flex;
     flex-direction: column;
     padding: 2rem;
+    gap: 2rem;
     border-radius: 0 0 .8rem .8rem;
-    justify-content: space-between;
 }
 
 .product__section-1{
@@ -249,54 +250,42 @@ h3{
 
 /* steps */
 .steps{
-    display: flex;
-    gap: 3rem;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}
-
-.step{
-    height: 40rem;
-    width: 60rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.step__figure{
-    height: 70%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.stepImage{
-    height: 100%;
-    width: 46.7%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+  }
+  
+  .step {
+    background: #F5F5F5;
+    border: 1px solid #CCC;
+    border-radius: 0.8rem;
+    padding: 2rem;
+  }
+  
+  .step-number {
+    background: #FF2D00;
+    color: #FFF;
+    width: 3rem;
+    height: 3rem;
     border-radius: 50%;
-    
-}
-
-h4{
-    font-size: 4rem;
-}
-
-.stepText{
-    font-size: 1.5rem;
-    overflow: hidden;
-}
+    text-align: center;
+    line-height: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  h4 {
+    color: #FF2D00;
+  }
 
 
-/*  */
+/* functie */
 .functieImage{
     height: 100%;
     width: 85%;
     object-fit: cover;
     margin-left: 15%;
-    border-radius: 8px;
+    border-radius: 0.8rem;
 }
 
 .functie{
@@ -306,7 +295,7 @@ h4{
     height: 80%;
     width: 55rem;
     background: #00838c;
-    border-radius: 8px;
+    border-radius: 0.8rem;
     padding: 3rem;
     display: flex;
     flex-direction: column;
@@ -363,7 +352,6 @@ h5{
     height: 100%;
     gap: 2rem;
     width: 80%;
-    flex-wrap: wrap;
 }
 
 .review{
@@ -382,15 +370,6 @@ h5{
 
 .review:nth-of-type(4), .review:nth-of-type(5), .review:nth-of-type(6){
     display: none;
-}
-
-.quote{
-    font-size: 500%;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    line-height: 0.5;
 }
 
 .stars{
@@ -415,11 +394,6 @@ h5{
     }
 }
 
-@media screen and (max-width: 50rem) {
-    .arrow{
-        display: none;
-    }
-}
 
 
 
@@ -560,13 +534,13 @@ h6{
 .ico--1 > ul > li > img{
     height: 3rem;
     width: auto;
-    border-radius: 8px;
+    border-radius: 0.8rem;
     object-fit: fill;
 }
 .ico--1 > ul > li > a > img{
     height: 3rem;
     width: auto;
-    border-radius: 8px;
+    border-radius: 0.8rem;
     object-fit: fill;
 }
 
@@ -612,7 +586,7 @@ h6{
         position: relative;
         left: 0;
         top: 0;
-        height: 20%;
+        height: auto;
         width: 100%;
         justify-content: space-between;
         flex-direction: row;
@@ -646,6 +620,7 @@ h6{
 
     .interessant{
         margin: 0rem;
+        padding: 1rem 3rem 2rem;
         border-radius: 0 0 .8rem .8rem;
     }
     
@@ -654,7 +629,50 @@ h6{
         color: white;
         margin-bottom: auto;
     }
+
+    /* categorieën */
+    .picas{
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 50% 50%;
+    }
+
+    h3{
+        font-size: 2rem;
+    }
+    .figureText{
+        font-size: 1rem;
+    }
+
+    /* steps */
+    .steps{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    /* functie */
+    .functieImage{
+        width: 100%;
+        object-fit: cover;
+        margin-left: 0;
+        border-radius: 0.8rem 0.8rem 0 0;
+    }
     
+    .functie{
+        position: relative;
+        left: 0;
+        top: 0;
+        width: 100%;
+        border-radius: 0 0 0.8rem 0.8rem;
+        padding: 1rem 3rem 2rem;
+    }
+    
+    h5{
+        font-size: 2rem;
+    } 
+    
+    .functieText{
+        font-size: 1rem;
+    }
 }
 
 @media screen and (max-width: 50rem) {
