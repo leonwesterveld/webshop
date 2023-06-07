@@ -68,12 +68,14 @@ h1{
 } 
 
 .mainButton{
-    font-size: 7vh;
+    font-size: 1.6rem;
+    font-weight: 600;
     background: none;
     color: white;
     border: white solid .2rem;
-    border-radius: 1vh;
-    padding: 1rem;
+    border-radius: .8rem;
+    padding: 2.5rem;
+    width: 100%;
 }
 
 .mainButton:hover{
@@ -135,12 +137,14 @@ h2{
 }
 
 .textButton{
-    font-size: 4rem;
+    font-size: 1.6rem;
+    font-weight: 600;
     background: none;
     color: white;
     border: white solid .2rem;
-    border-radius: 1vh;
-    padding: 1rem;
+    border-radius: .8rem;
+    padding: 2.5rem;
+    width: 100%;
 }
 
 .textButton:hover{
@@ -170,6 +174,7 @@ h2{
     width: 100%;
     display: flex;
     flex-direction: column;
+    cursor: pointer;
 }
 
 .product__figure{
@@ -218,7 +223,7 @@ h2{
     border-radius: 50%;
 }
 
-.arrowButton:hover{
+.product:hover .arrowButton{
     transition: 0.5s;
     background: white;
     color: black;
@@ -330,6 +335,19 @@ h5{
     padding: 4rem;
 }
 
+.review > figure{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+
+.review__img{
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+}
+
 .arrow{
     width: 10%;
     font-size: 300%;
@@ -342,6 +360,9 @@ h5{
 }
 
 .arrow:hover{
+    transition: 0.5s;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
     cursor: pointer;
 }
 
@@ -356,7 +377,7 @@ h5{
 
 .review{
     width: 30rem;
-    min-height: 20rem;
+    min-height: 30rem;
     list-style: none;
     padding: 4rem;
     border-radius: .5rem;
@@ -366,7 +387,7 @@ h5{
     position: relative;
     animation-name: fadeIn;
     animation-duration: 0.4s;
-}
+    }
 
 .review:nth-of-type(4), .review:nth-of-type(5), .review:nth-of-type(6){
     display: none;
@@ -479,75 +500,6 @@ h5{
 
 
 
-
-.footer-white{
-    height: 20rem;
-}
-
-h6{
-    font-size: 2rem;
-}
-
-.footer-white > ul{
-    margin: 0 20rem 0 20rem;
-    display: flex;
-    gap: 3rem;
-    height: 100%;
-}
-
-.ico--1{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    padding: 3rem;
-}
-
-.ico--1 > ul{
-    display: flex;
-    gap: 1rem;
-}
-
-.ico--2{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    padding: 3rem;
-}
-
-.ico--2 > p{
-    font-size: 1.5rem;
-}
-
-.ico--2 > form > input{
-    padding: 1rem;
-    border: #d0cdc7 1px solid;
-}
-
-.ico--2 > form > button{
-    background: #d0cdc7;
-    border: none;
-    padding: 1rem;
-}
-
-.ico--1 > ul > li > img{
-    height: 3rem;
-    width: auto;
-    border-radius: 0.8rem;
-    object-fit: fill;
-}
-.ico--1 > ul > li > a > img{
-    height: 3rem;
-    width: auto;
-    border-radius: 0.8rem;
-    object-fit: fill;
-}
-
-
-
-
-
 @media screen and (max-width: 87.5rem) {
     
     h1{
@@ -599,6 +551,7 @@ h6{
     
     .mainButton{
         font-size: 3rem;
+        width: auto;
     }
 
 
@@ -628,6 +581,9 @@ h6{
         font-size: 1.5rem;
         color: white;
         margin-bottom: auto;
+    }
+    .textButton{
+        width: auto;
     }
 
     /* categorieën */

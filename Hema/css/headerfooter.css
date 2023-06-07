@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; 
 }
 
 html {
@@ -32,6 +32,11 @@ li {
 
 header{
     height: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background: white;
+    box-shadow: 0 0 .4rem 0 rgba(0, 0, 0, 0.4);
 }
 
 .logo{
@@ -93,8 +98,9 @@ header{
 }
 
 .footer-purple > ul{
-    margin: 0 20rem 0 20rem;
-    display: flex;
+    margin: 0 10rem 0 10rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 3rem;
     height: 100%;
     color: white;
@@ -131,28 +137,27 @@ h5{
     border-bottom: white solid 1px;
 }
 
-
-
-
 .hulp > form{
     display: flex;
+    position: relative;
 }
 
 .hulp > form > input{
     padding: 1rem;
     border: none;
     border-radius: 2px 0 0 2px;
-    width: 25rem;
+    width: 100%;
     position: relative;
 }
 
 .hulp > form > button{
     position: absolute;
     background: none;
-    right: 27rem;
+    right: 1vh;
     border: none;
-    border-radius: 0 2px 2px 0;
+    border-radius: 0 .2rem .2rem 0;
 }
+
 .hulp > form > button:hover{
     cursor: pointer;
 }
@@ -176,14 +181,14 @@ h6{
 }
 
 .footer-white > ul{
-    margin: 0 20rem 0 20rem;
-    display: flex;
+    margin: 0 10rem 0 10rem;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
     gap: 3rem;
     height: 100%;
 }
 
 .ico--1{
-    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -196,7 +201,6 @@ h6{
 }
 
 .ico--2{
-    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -205,6 +209,12 @@ h6{
 
 .ico--2 > p{
     font-size: 1.5rem;
+}
+
+.ico--2 > form{
+    display: flex;
+    gap: .5rem;
+    width: 100%;
 }
 
 .ico--2 > form > input{
@@ -231,7 +241,26 @@ h6{
     object-fit: fill;
 }
 
-
+@media screen and (max-width: 80rem) {
+    .footer-white, .footer-purple{
+        height: 16rem;
+    }
+    h5{
+        font-size: 3rem;
+    }
+    .hulp > p{
+        font-size: 1rem;
+    }
+    h6{
+        font-size: 1.4rem;
+    }
+    .ico--2 > p{
+        font-size: 1rem;
+    }
+    .footer-purple > ul{
+        margin: 0 5rem 0 5rem;
+    }
+}
 
 @media screen and (max-width: 50rem) {
     /* header--------------------------------------------------------- */
@@ -240,5 +269,9 @@ h6{
      }
      .header-normal{
         display: none;
+    }
+
+    .footer-purple > ul{
+        margin: 0 3rem 0 3rem;
     }
 }
