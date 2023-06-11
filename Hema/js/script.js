@@ -64,17 +64,19 @@ function showSlides(n) {
     slides[slideIndex - 1].style.display = "block";
 }
 
-
-let btn = document.getElementById("btn");
 let sb = document.getElementById("polo");
 
-btn.onclick = (event) => {
+sb.onchange = (event) => {
     event.preventDefault();
 
     value = sb.value;
     switch (value) {
         case "navy":
             window.location.href = "polos.html";
+            break;
+        
+        case "blue":
+            window.location.href = "polos_blue.html";
             break;
 
         case "white":

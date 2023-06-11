@@ -92,15 +92,18 @@ header{
 }
 
 /* footer */
-.footer-purple{
+.footer{
     background: #9C1AFF;
+    background-size: 50%;
     height: 20rem;
+
 }
 
-.footer-purple > ul{
-    margin: 0 10rem 0 10rem;
+.footer > ul{
+    margin: 0 15rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     gap: 3rem;
     height: 100%;
     color: white;
@@ -170,20 +173,15 @@ h5{
 
 
 
-
-
-.footer-white{
-    height: 20rem;
-}
-
 h6{
     font-size: 2rem;
+    color: black;
 }
 
 .footer-white > ul{
-    margin: 0 10rem 0 10rem;
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
+    margin: 0 15rem 0 15rem;
+    display: flex;
+    justify-content: space-between;
     gap: 3rem;
     height: 100%;
 }
@@ -193,6 +191,7 @@ h6{
     flex-direction: column;
     gap: 2rem;
     padding: 3rem;
+    overflow: hidden;
 }
 
 .ico--1 > ul{
@@ -209,6 +208,7 @@ h6{
 
 .ico--2 > p{
     font-size: 1.5rem;
+    color: black;
 }
 
 .ico--2 > form{
@@ -242,7 +242,7 @@ h6{
 }
 
 @media screen and (max-width: 80rem) {
-    .footer-white, .footer-purple{
+    .footer{
         height: 16rem;
     }
     h5{
@@ -257,8 +257,15 @@ h6{
     .ico--2 > p{
         font-size: 1rem;
     }
-    .footer-purple > ul{
-        margin: 0 5rem 0 5rem;
+    .footer > ul{
+        margin: 0 8rem;
+    }
+
+    .ico--1 > ul > li > img{
+        height: 2rem;
+    }
+    .ico--1 > ul > li > a > img{
+        height: 2rem;
     }
 }
 
@@ -271,7 +278,51 @@ h6{
         display: none;
     }
 
-    .footer-purple > ul{
-        margin: 0 3rem 0 3rem;
+    .footer > ul{
+        margin: 0 3rem;
+    }
+
+    .footer{
+        height: 7rem;
+    }
+
+    .footer > ul{
+        margin: 0 3rem;
+        gap: .1rem;
+    }
+
+    h5{
+        font-size: 1rem;
+    }
+
+    .hulp{
+        gap: 0.5rem;
+        padding: 1rem;
+    }
+    
+    .hulp > p{
+        font-size: .5rem;
+    }
+    h6{
+        font-size: 1rem;
+    }
+    .ico--2 > p{
+        font-size: .5rem;
+    }
+
+    .ico--1, .ico--2 {
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .ico--1 > ul > li > img{
+        height: .5rem;
+    }
+    .ico--1 > ul > li > a > img{
+        height: .5rem;
+    }
+
+    form > button, form > input{
+        font-size: .7rem;
     }
 }
