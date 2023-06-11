@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KAKKER - polo beige</title>
+    <link rel="icon" type="image/x-icon" href="../img/logo.png" />
+    <link rel="stylesheet" href="../css/headerfooter.css" />
+    <link rel="stylesheet" href="../css/product.css" />
+    <script src="https://kit.fontawesome.com/b273e788b2.js" crossorigin="anonymous"></script>
+    <script src="../js/polos_vrouwen.js" defer></script>
+    <script src="../js/script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-hamburger">
+            <a class="logo--link" href="../index.html">
+                <img class="logo" src="../img/logo.png" alt="" />
+            </a>
+            <div id="myLinks">
+                <a href="/Hema/overview/heren.html"><i class="fa-solid fa-mars"></i><span> heren</span></a>
+                <a href="/Hema/overview/dames.html"><i class="fa-solid fa-venus"></i><span> dames</a>
+            </div>
+            <a class="bar" onclick="myFunction()"><i class="fa fa-bars"></i></a>
+        </div>
+
+        <div class="header-normal">
+            <a class="logo--link" href="../index.html">
+                <img class="logo" src="../img/logo.png" alt="" />
+            </a>
+            <div class="items">
+                <a href="/Hema/overview/heren.html"><i class="fa-solid fa-mars"></i><span> heren</span></a>
+                <a href="/Hema/overview/dames.html"><i class="fa-solid fa-venus"></i><span> dames</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <article class="product">
+            <section class="product__section product__section-1">
+                <div class="slideshow-container">
+                    <figure class="mySlides fade">
+                        <img class="slides__pic" src="../products_polo_vrouwen/pink_front.webp" alt="">
+                    </figure>
+
+                    <figure class="mySlides fade">
+                        <img class="slides__pic" src="../products_polo_vrouwen/pink_wear.webp" alt="">
+                    </figure>
+
+                    <figure class="mySlides fade">
+                        <img class="slides__pic" src="../products_polo_vrouwen/pink_full.webp" alt="">
+                    </figure>
+
+                    <figure class="mySlides fade">
+                        <img class="slides__pic" src="../products_polo_vrouwen/pink_back.webp" alt="">
+                    </figure>
+
+                    <figure class="mySlides fade">
+                        <img class="slides__pic" src="../products_polo_vrouwen/pink_colour.webp" alt="">
+                    </figure>
+
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+            </section>
+            <section class="product__section product__section-2">
+                <h1>polos</h1>
+                <form action="http://127.0.0.1:5500/Hema/polos/polos.html">
+                    <label for="polo_v">Choose a color</label>
+                    <select id="polo_v" name="polo_v">
+                        <option value="navy">navy</option>
+                        <option value="blue">blue</option>
+                        <option value="white">white</option>
+                        <option value="red">red</option>
+                        <option selected value="pink">pink</option>
+                    </select>
+                </form>
+            </section>
+            <section class="product__section product__section-3">
+                <h5>hello</h5>
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        <section class="footer">
+            <ul>
+                <li class="hulp">
+                    <h5>hulp nodig?</h5>
+                    <p><a class="klant" href="">• bestellen</a></p>
+                    <p><a class="klant" href="">• afhalen</a></p>
+                </li>
+                <li class="hulp">
+                    <h5>meer vragen</h5>
+                    <p>ga naar
+                        <br><a class="ks" href="">onze klantenservice</a>
+                    </p>
+                </li>
+                <li class="hulp">
+                    <h5>vind een winkel</h5>
+                    <form class="map" action="https://www.google.com/maps/place/">
+                        <input class="plaats" type="text" name="q" placeholder="vul postcode of plaats in">
+                        <button class="glass"><i class="zoeken fa-solid fa-magnifying-glass"></i></button>
+                    </form>
+                </li>
+                <li class="ico--1">
+                    <h6>volg KAKKER</h6>
+                    <ul class="icons">
+                        <li>
+                            <a href="https://github.com/leonwesterveld"><img src="../icons/github.ico" alt=""></a>
+                        </li>
+                        <li>
+                            <a href="https://www.reddit.com/user/ConsciousBag4512"><img src="../icons/twitter.ico" alt=""></a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/leon-westerveld-aa5666277/"><img src="../icons/instagram.ico"
+                                    alt=""></a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="ico--1">
+                    <h6>makkelijk betalen*</h6>
+                    <ul class="icons">
+                        <li>
+                            <img src="../icons/ideal.ico" alt="">
+                        </li>
+                        <li>
+                            <img src="../icons/mastercard.ico" style="border-radius: 0;" alt="">
+                        </li>
+                        <li>
+                            <img src="../icons/Visa.ico" alt="">
+                        </li>
+                        <li>
+                            <img src="../icons/amex.ico" alt="">
+                        </li>
+                        <li>
+                            <img src="../icons/Paypal.ico" alt="">
+                        </li>
+                    </ul>
+                </li>
+                <li class="ico--2">
+                    <h6>nieuwsbrief</h6>
+                    <p>schrijf je in voor de nieuwsbrief en mis nooit meer iets. krijg direct bij je eerste bestelling 10%
+                        korting. </p>
+                    <form action="https://mail.google.com/mail//">
+                        <input type="email" placeholder="e-mailadres" required>
+                        <button>aanmelden</button>
+                    </form>
+                </li>
+            </ul>
+        </section>
+    
+    
+    
+    </footer>
+</body>
+
+</html>
