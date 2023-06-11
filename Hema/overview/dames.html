@@ -6,13 +6,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>KAKKER - polo red</title>
+    <title>KAKKER - heren</title>
     <link rel="icon" type="image/x-icon" href="../img/logo.png" />
     <link rel="stylesheet" href="../css/headerfooter.css" />
-    <link rel="stylesheet" href="../css/product.css" />
+    <link rel="stylesheet" href="../css/overview.css" />
     <script src="https://kit.fontawesome.com/b273e788b2.js" crossorigin="anonymous"></script>
-    <script src="../js/polos.js" defer></script>
-    <script src="../js/script.js" defer></script>
+    <script src="../js/product.js" defer></script>
 </head>
 
 <body>
@@ -37,47 +36,66 @@
                 <a href="/Hema/overview/dames.html"><i class="fa-solid fa-venus"></i><span> dames</a>
             </div>
         </div>
+        
     </header>
+    <ul class="info">
+        <li class="information"><i class="fa-sharp fa-solid fa-check" style="color: #9ac122;"></i>voor 22:00 besteld, morgen in huis</li>
+        <li class="information"><i class="fa-sharp fa-solid fa-check" style="color: #9ac122;"></i>gratis thuisbezorgd vanaf 250.-</li>
+        <li class="information"><i class="fa-sharp fa-solid fa-check" style="color: #9ac122;"></i>afhalen in 500+ KAKKER winkels</li>
+    </ul>
+    <div class="container">
+        <aside>
+            <a class="home" href="/Hema/index.html">home</a>
 
-    <main>
-        <article class="product">
-            <section class="product__section product__section-1">
-                <div class="slideshow-container">
-                    <figure class="mySlides fade">
-                        <img class="slides__pic" src="../products_polo/red_front.webp" alt="">
-                    </figure>
+            <ul class="checkboxes">
+                <li class="checkbox">
+                    <input id="checkbox-polos" type="checkbox" class="filter">
+                    <label for="checkbox-polos" class="label">polos</label>
+                </li>
+                <li class="checkbox">
+                    <input id="checkbox-sweaters" type="checkbox" class="filter">
+                    <label for="checkbox-sweaters" class="label">sweaters</label>
+                </li>
+                <li class="checkbox">
+                    <input id="checkbox-Xbox" type="checkbox" class="filter">
+                    <label for="checkbox-Xbox" class="label">Xbox</label>
+                </li>
+                <li class="checkbox">
+                    <input id="checkbox-Nintendo" type="checkbox" class="filter">
+                    <label for="checkbox-Nintendo" class="label">Nintendo</label>
+                </li>
+            </ul>
+        </aside>
 
-                    <figure class="mySlides fade">
-                        <img class="slides__pic" src="../products_polo/red_wear.webp" alt="">
-                    </figure>
-
-                    <figure class="mySlides fade">
-                        <img class="slides__pic" src="../products_polo/red_colour.jpg" alt="">
-                    </figure>
-
-                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-                </div>
+        <main>
+            <section class="inputs">
+                
             </section>
-            <section class="product__section product__section-2">
-                <h1>polos</h1>
-                <form action="http://127.0.0.1:5500/Hema/polos/polos.html">
-                    <label for="polo">Choose a color</label>
-                    <select id="polo" name="polo">
-                        <option value="navy">navy</option>
-                        <option value="blue">blue</option>
-                        <option value="white">white</option>
-                        <option selected value="red">red</option>
-                        <option value="beige">beige</option>
-                        <option value="pink">pink</option>
-                    </select>
-                </form>
-            </section>
-            <section class="product__section product__section-3">
-                <h5>hello</h5>
-            </section>
-        </article>
-    </main>
+            <ul class="games">
+                <li class="game" data-category="polos"><img src="../products_polo/beige_front.webp" alt=""></li>
+                <li class="game" data-category="polos"><img src="../products_polo/blue_front.webp" alt=""></li>
+                <li class="game" data-category="polos"><img src="../products_polo/navy_front.webp" alt=""></li>
+                <li class="game" data-category="polos"><img src="../products_polo/red_front.webp" alt=""></li>
+                <li class="game" data-category="polos"><img src="../products_polo/white_front.webp" alt=""></li>
+                <li class="game" data-category="sweaters"><img src="../products_sweater/beige_front.webp" alt=""></li>
+                <li class="game" data-category="sweaters"><img src="../products_sweater/blue_front.webp" alt=""></li>
+                <li class="game" data-category="sweaters"><img src="../products_sweater/yellow_front.webp" alt=""></li>
+                <li class="game" data-category="sweaters"><img src="../products_sweater/pink_front.webp" alt=""></li>
+                <li class="game" data-category="sweaters"><img src="../products_sweater/purple_front.webp" alt=""></li>
+                <li class="game" data-category="sweaters"><img src="../products_sweater/green_front.webp" alt=""></li>
+                <li class="game" data-category="Xbox"><img src="../products_polo/blue_full.webp" alt=""></li>
+                <li class="game" data-category="Xbox"><img src="../products_polo/blue_full.webp" alt=""></li>
+                <li class="game" data-category="Xbox"><img src="../products_polo/blue_full.webp" alt=""></li>
+                <li class="game" data-category="Xbox"><img src="../products_polo/blue_full.webp" alt=""></li>
+                <li class="game" data-category="Nintendo"><img src="../products_polo/pink_full.webp" alt=""></li>
+                <li class="game" data-category="Nintendo"><img src="../products_polo/pink_full.webp" alt=""></li>            
+                <li class="game" data-category="Nintendo"><img src="../products_polo/pink_full.webp" alt=""></li>
+                <li class="game" data-category="Nintendo"><img src="../products_polo/pink_full.webp" alt=""></li>
+                <li class="game" data-category="Nintendo"><img src="../products_polo/pink_full.webp" alt=""></li>
+            </ul>
+        </main>
+    </div>
+
 
     <footer>
         <section class="footer">

@@ -64,37 +64,3 @@ function showSlides(n) {
     slides[slideIndex - 1].style.display = "block";
 }
 
-let sb = document.getElementById("polo");
-
-sb.onchange = (event) => {
-    event.preventDefault();
-
-    value = sb.value;
-    switch (value) {
-        case "navy":
-            window.location.href = "polos.html";
-            break;
-        
-        case "blue":
-            window.location.href = "polos_blue.html";
-            break;
-
-        case "white":
-            window.location.href = "polos_white.html";
-            break;
-
-        case "red":
-            window.location.href = "polos_red.html";
-            break;
-
-        case "beige":
-            window.location.href = "polos_beige.html";
-            break;
-
-        case "pink":
-            window.location.href = "polos_pink.html";
-            break;
-
-        default:
-    }
-};

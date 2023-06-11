@@ -262,10 +262,29 @@ h6{
     }
 
     .ico--1 > ul > li > img{
-        height: 2rem;
+        height: 1.5rem;
     }
     .ico--1 > ul > li > a > img{
+        height: 1.5rem;
+    }
+    
+    .hulp >form > button, form > input{
+        font-size: .7rem;
+        padding: 0.5rem;
         height: 2rem;
+    }
+
+    .ico--2 >form>button{
+        font-size: .7rem;   
+        padding: .5rem;
+    }
+
+    .hulp > form > button{
+        right: 0vh;
+    }
+    .hulp > form > button > i{
+        background: none;
+        padding: .2rem;
     }
 }
 
@@ -283,7 +302,7 @@ h6{
     }
 
     .footer{
-        height: 7rem;
+        height: 6.5rem;
     }
 
     .footer > ul{
@@ -316,13 +335,10 @@ h6{
     }
 
     .ico--1 > ul > li > img{
-        height: .5rem;
+        height: 1rem;
     }
     .ico--1 > ul > li > a > img{
-        height: .5rem;
+        height: 1rem;
     }
 
-    form > button, form > input{
-        font-size: .7rem;
-    }
 }

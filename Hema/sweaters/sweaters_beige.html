@@ -6,12 +6,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>KAKKER - polo red</title>
+    <title>KAKKER - sweater </title>
     <link rel="icon" type="image/x-icon" href="../img/logo.png" />
     <link rel="stylesheet" href="../css/headerfooter.css" />
     <link rel="stylesheet" href="../css/product.css" />
     <script src="https://kit.fontawesome.com/b273e788b2.js" crossorigin="anonymous"></script>
-    <script src="../js/polos.js" defer></script>
+    <script src="../js/sweater.js" defer></script>
     <script src="../js/script.js" defer></script>
 </head>
 
@@ -44,15 +44,19 @@
             <section class="product__section product__section-1">
                 <div class="slideshow-container">
                     <figure class="mySlides fade">
-                        <img class="slides__pic" src="../products_polo/red_front.webp" alt="">
+                        <img class="slides__pic" src="../products_sweater/beige_front.webp" alt="" />
                     </figure>
 
                     <figure class="mySlides fade">
-                        <img class="slides__pic" src="../products_polo/red_wear.webp" alt="">
+                        <img class="slides__pic" src="../products_sweater/beige_wear.webp" alt="" />
                     </figure>
 
                     <figure class="mySlides fade">
-                        <img class="slides__pic" src="../products_polo/red_colour.jpg" alt="">
+                        <img class="slides__pic" src="../products_sweater/beige_back.webp" alt="" />
+                    </figure>
+
+                    <figure class="mySlides fade">
+                        <img class="slides__pic" src="../products_sweater/beige_colour.webp" alt="" />
                     </figure>
 
                     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -60,16 +64,16 @@
                 </div>
             </section>
             <section class="product__section product__section-2">
-                <h1>polos</h1>
-                <form action="http://127.0.0.1:5500/Hema/polos/polos.html">
-                    <label for="polo">Choose a color</label>
-                    <select id="polo" name="polo">
-                        <option value="navy">navy</option>
-                        <option value="blue">blue</option>
-                        <option value="white">white</option>
-                        <option selected value="red">red</option>
-                        <option value="beige">beige</option>
-                        <option value="pink">pink</option>
+                <h1>sweaters</h1>
+                <form action="http://127.0.0.1:5500/Hema/sweaters/sweaters_beige.html">
+                    <label for="sweater">Choose a color</label>
+                    <select id="sweater" name="sweater">
+                        <option selected id="select_beige" value="beige">beige</option>
+                        <option id="select_blue" value="blue">blue</option>
+                        <option id="select_green" value="green">green</option>
+                        <option id="select_pink" value="pink">pink</option>
+                        <option id="select_purple" value="purple">purple</option>
+                        <option id="select_yellow" value="yellow">yellow</option>
                     </select>
                 </form>
             </section>

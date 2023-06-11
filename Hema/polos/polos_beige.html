@@ -6,11 +6,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>KAKKER</title>
+    <title>KAKKER - polo beige</title>
     <link rel="icon" type="image/x-icon" href="../img/logo.png" />
     <link rel="stylesheet" href="../css/headerfooter.css" />
     <link rel="stylesheet" href="../css/product.css" />
     <script src="https://kit.fontawesome.com/b273e788b2.js" crossorigin="anonymous"></script>
+    <script src="../js/polos.js" defer></script>
     <script src="../js/script.js" defer></script>
 </head>
 
@@ -21,8 +22,8 @@
                 <img class="logo" src="../img/logo.png" alt="" />
             </a>
             <div id="myLinks">
-                <a href="/Hema/polos/polos.html">polo's</a>
-                <a href="/Hema/sweaters/sweaters.html">sweaters</a>
+                <a href="/Hema/overview/heren.html"><i class="fa-solid fa-mars"></i><span> heren</span></a>
+                <a href="/Hema/overview/dames.html"><i class="fa-solid fa-venus"></i><span> dames</a>
             </div>
             <a class="bar" onclick="myFunction()"><i class="fa fa-bars"></i></a>
         </div>
@@ -32,8 +33,8 @@
                 <img class="logo" src="../img/logo.png" alt="" />
             </a>
             <div class="items">
-                <a href="/Hema/polos/polos.html">polo's</a>
-                <a href="/Hema/sweaters/sweaters.html">sweaters</a>
+                <a href="/Hema/overview/heren.html"><i class="fa-solid fa-mars"></i><span> heren</span></a>
+                <a href="/Hema/overview/dames.html"><i class="fa-solid fa-venus"></i><span> dames</a>
             </div>
         </div>
     </header>
@@ -43,23 +44,23 @@
             <section class="product__section product__section-1">
                 <div class="slideshow-container">
                     <figure class="mySlides fade">
-                        <img class="slides__pic" src="../products/beige_front.webp" alt="">
+                        <img class="slides__pic" src="../products_polo/beige_front.webp" alt="">
                     </figure>
 
                     <figure class="mySlides fade">
-                        <img class="slides__pic" src="../products/beige_wear.webp" alt="">
+                        <img class="slides__pic" src="../products_polo/beige_wear.webp" alt="">
                     </figure>
 
                     <figure class="mySlides fade">
-                        <img class="slides__pic" src="../products/beige_colour.webp" alt="">
+                        <img class="slides__pic" src="../products_polo/beige_colour.webp" alt="">
                     </figure>
 
                     <figure class="mySlides fade">
-                        <img class="slides__pic" src="../products/beige_back.webp" alt="">
+                        <img class="slides__pic" src="../products_polo/beige_back.webp" alt="">
                     </figure>
 
                     <figure class="mySlides fade">
-                        <img class="slides__pic" src="../products/beige_full.webp" alt="">
+                        <img class="slides__pic" src="../products_polo/beige_full.webp" alt="">
                     </figure>
 
                     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -71,12 +72,12 @@
                 <form action="http://127.0.0.1:5500/Hema/polos/polos.html">
                     <label for="polo">Choose a color</label>
                     <select id="polo" name="polo">
-                        <option id="select_navy" value="navy">navy</option>
-                        <option id="select_blue" value="blue">blue</option>
-                        <option id="select_white" value="white">white</option>
-                        <option id="select_red" value="red">red</option>
-                        <option selected id="select_beige" value="beige">beige</option>
-                        <option id="select_pink" value="pink">pink</option>
+                        <option value="navy">navy</option>
+                        <option value="blue">blue</option>
+                        <option value="white">white</option>
+                        <option value="red">red</option>
+                        <option selected value="beige">beige</option>
+                        <option value="pink">pink</option>
                     </select>
                 </form>
             </section>
