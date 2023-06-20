@@ -22,8 +22,8 @@
                 <img class="logo" src="../img/logo.png" alt="" />
             </a>
             <div id="myLinks">
-                <a href="/Hema/overview/heren.html"><i class="fa-solid fa-mars"></i><span> heren</span></a>
-                <a href="/Hema/overview/dames.html"><i class="fa-solid fa-venus"></i><span> dames</a>
+                <a href="/Hema/overview/items.html"><i class="fa-solid fa-layer-group" style="color: #000000;"></i> categorieën</a>
+                <a href="/Hema/overview/prijs.html"><i class="fa-solid fa-tag" style="color: #000000;"></i> prijs</a>
             </div>
             <a class="bar" onclick="myFunction()"><i class="fa fa-bars"></i></a>
         </div>
@@ -33,8 +33,8 @@
                 <img class="logo" src="../img/logo.png" alt="" />
             </a>
             <div class="items">
-                <a href="/Hema/overview/heren.html"><i class="fa-solid fa-mars"></i><span> heren</span></a>
-                <a href="/Hema/overview/dames.html"><i class="fa-solid fa-venus"></i><span> dames</a>
+                <a href="/Hema/overview/items.html"><i class="fa-solid fa-layer-group" style="color: #000000;"></i> categorieën</a>
+                <a href="/Hema/overview/prijs.html"><i class="fa-solid fa-tag" style="color: #000000;"></i> prijs</a>
             </div>
         </div>
     </header>
@@ -44,7 +44,7 @@
             <section class="product__section product__section-1">
                 <div class="slideshow-container">
                     <figure class="mySlides fade">
-                        <img class="slides__pic" src="../products_sweater/pink_front.webp" alt="" />
+                        <img class="slides__pic" id="picture" src="../products_sweater/pink_front.webp" alt="" />
                     </figure>
 
                     <figure class="mySlides fade">
@@ -64,10 +64,19 @@
                 </div>
             </section>
             <section class="product__section product__section-2">
+                <figure class="shoppingcard">
+                    <a href="/Hema/shoppingcard/shoppingcart.html">
+                        <i class="karretje fa-solid fa-cart-shopping fa-xl" style="color: #000000;">
+                            <figure class="aantal">
+                                <p id="item">0</p>
+                            </figure>
+                        </i>
+                    </a>
+                </figure> 
                 <h1>polos</h1>
                 <form action="http://127.0.0.1:5500/Hema/sweaters/sweaters_beige.html">
                     <label for="sweater">Choose a color</label>
-                    <select id="sweater" name="sweater">
+                    <select id="sweater" class="select__all" name="sweater">
                         <option id="select_beige" value="beige">beige</option>
                         <option id="select_blue" value="blue">blue</option>
                         <option id="select_green" value="green">green</option>
@@ -75,10 +84,38 @@
                         <option id="select_purple" value="purple">purple</option>
                         <option id="select_yellow" value="yellow">yellow</option>
                     </select>
-                </form>
+                </form>                
+                <div class="sizes">
+                    <button class="size" id="small">S</button>
+                    <button class="size" id="medium">M</button>
+                    <button class="size" id="large">L</button>
+
+                    
+                    <button id="card">hoi</button>
+
+                    <!-- The Modal -->
+                    <div id="myModal" class="modal">
+                        <span id="close">×</span>
+                        <img class="modal-content" id="img01">
+                        <div class="product__info">
+                            <p id="grote" style="color: white;"></p>
+                            <button id="voeg">voeg to aan winkelmantje</button>
+                        </div>
+                    </div>
+                </div>
             </section>
             <section class="product__section product__section-3">
-                <h5>hello</h5>
+                <h5 class="tielel">De "Comfort Chic" Sweater:</h5>
+                <p class="beschrijving">Deze sweater is gemaakt van hoogwaardig materiaal zoals zacht kasjmier of een blend van fijn katoen en wol. 
+                    Het biedt niet alleen warmte en comfort, maar voelt ook heerlijk zacht en luxueus aan op je huid.
+
+                    Deze sweater heeft een tijdloos ontwerp met een moderne twist. 
+                    Het heeft een relaxte pasvorm die je veel bewegingsvrijheid geeft, terwijl het toch gestroomlijnd en flatterend blijft. 
+                    De geribbelde boorden aan de mouwen en de onderkant zorgen voor een nauwsluitende afwerking.
+                    
+                    Wat deze sweater echt opvallend maakt, is het oog voor detail.
+                    Het is voorzien van subtiele accenten zoals contrasterende stiksels voor een unieke textuur. 
+                    Deze details voegen een vleugje elegantie en originaliteit toe aan de sweater, waardoor je er moeiteloos modieus uitziet.</p>
             </section>
         </article>
     </main>

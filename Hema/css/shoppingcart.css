@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "HurmeHEMA","Century Gothic",sans-serif;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+li {
+    list-style: none;
+}
+
+main{
+    padding: 3rem;
+    height: 100%;
+}
+
+article{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 3rem;
+}
+
+section{
+    background-color: red;
+    height: 20rem;
+    width: 100%;
+}
