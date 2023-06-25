@@ -1,97 +1,76 @@
 let polo = document.getElementById("polo_v");
+let prijs = document.getElementsByClassName("price")[0];
 
-polo.onchange = (event) => {
-    event.preventDefault();
+const images = document.getElementsByClassName("slides__pic");
 
-    value = polo.value;
-    switch (value) {
-        case "navy":
-            window.location.href = "polos_navy.html";
-            break;
-        
-        case "blue":
-            window.location.href = "polos_blue.html";
-            break;
-
-        case "white":
-            window.location.href = "polos_white.html";
-            break;
-
-        case "red":
-            window.location.href = "polos_red.html";
-            break;
-
-        case "beige":
-            window.location.href = "polos_beige.html";
-            break;
-
-        case "pink":
-            window.location.href = "polos_pink.html";
-            break;
-
-        default:
-    }
-};
-
-let small = document.getElementById('small');
-let medium = document.getElementById("medium");
-let large = document.getElementById('large');
-
-let size = "hoi"
-
-var modal = document.getElementById("myModal");
-let picture = document.getElementById("picture").src;
-var voeg = document.getElementById('voeg');
-var grote = document.getElementById('grote');
-var img = document.getElementById("card");
-var modalImg = document.getElementById("img01");
-var closing = document.getElementById("close");
-var item = document.getElementById("item");
+fetch("../product.json")
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (data) {
 
 
-small.onclick = function () {
-    small.style.background = "#ff9898";
-    medium.style.background = "buttonface";
-    large.style.background = "buttonface";
-    size = "small"
-    console.log(size);
-    img.onclick = function(){
-        modal.style.display = "flex";
-        modalImg.src = picture;
-        grote.innerHTML = size;
-    }
-}
-medium.onclick = function () {
-    small.style.background = "buttonface";
-    medium.style.background = "#ff9898";
-    large.style.background = "buttonface";
-    size = "medium"
-    console.log(size);
-    img.onclick = function(){
-        modal.style.display = "flex";
-        modalImg.src = picture;
-        grote.innerHTML = size;
-    }
-}
-large.onclick = function () {
-    small.style.background = "buttonface";
-    medium.style.background = "buttonface";
-    large.style.background = "#ff9898";
-    size = "large"
-    console.log(size);
-    img.onclick = function(){
-        modal.style.display = "flex";
-        modalImg.src = picture;
-        grote.innerHTML = size;
-    }
-}
+        polo.onchange = (event) => {
+            event.preventDefault();
 
-closing.onclick = function() { 
-    modal.style.display = "none"; 
-}   
+            value = polo.value;
+            switch (value) {
+                case "blue":
+                    for (let i = 0; i < images.length; i++) {
+                        images[0].setAttribute("src", data.information[12].front);
+                        images[1].setAttribute("src", data.information[12].wear);
+                        images[2].setAttribute("src", data.information[12].colour);
+                        images[3].setAttribute("src", data.information[12].back);
+                        images[4].setAttribute("src", data.information[12].full);
+                        prijs.innerHTML = "€" + data.information[12].prijs + ",-";
+                        
+                    }
+                    break;
+                
+                case "navy":
+                    for (let i = 0; i < images.length; i++) {
+                        images[0].setAttribute("src", data.information[13].front);
+                        images[1].setAttribute("src", data.information[13].wear);
+                        images[2].setAttribute("src", data.information[13].colour);
+                        images[3].setAttribute("src", data.information[13].back);
+                        images[4].setAttribute("src", data.information[13].full);
+                        prijs.innerHTML = "€" + data.information[13].prijs + ",-";
+                    }
+                    break;
 
-let aantal = 1;
-voeg.onclick = function() {
-    modal.style.display = "none"; 
-    item.innerHTML = aantal ++;
-}
+                case "pink":
+                    for (let i = 0; i < images.length; i++) {
+                        images[0].setAttribute("src", data.information[14].front);
+                        images[1].setAttribute("src", data.information[14].wear);
+                        images[2].setAttribute("src", data.information[14].colour);
+                        images[3].setAttribute("src", data.information[14].back);
+                        images[4].setAttribute("src", data.information[14].full);
+                        prijs.innerHTML = "€" + data.information[14].prijs + ",-";
+                    }
+                    break;
+
+                case "red":
+                    for (let i = 0; i < images.length; i++) {
+                        images[0].setAttribute("src", data.information[15].front);
+                        images[1].setAttribute("src", data.information[15].wear);
+                        images[2].setAttribute("src", data.information[15].colour);
+                        images[3].setAttribute("src", data.information[15].back);
+                        images[4].setAttribute("src", data.information[15].full);
+                        prijs.innerHTML = "€" + data.information[15].prijs + ",-";
+                    }
+                    break;
+                    
+                case "white":
+                    for (let i = 0; i < images.length; i++) {
+                        images[0].setAttribute("src", data.information[16].front);
+                        images[1].setAttribute("src", data.information[16].wear);
+                        images[2].setAttribute("src", data.information[16].colour);
+                        images[3].setAttribute("src", data.information[16].back);
+                        images[4].setAttribute("src", data.information[16].full);
+                        prijs.innerHTML = "€" + data.information[16].prijs + ",-";
+                    }
+                    break;
+            }
+        };
+
+    });

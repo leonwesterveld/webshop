@@ -1,0 +1,145 @@
+{
+    "information": [
+        {
+            "name": "polo - beige",
+            "prijs": "90",
+            "front": "../products_polo/beige_front.webp",
+            "colour": "../products_polo/beige_colour.webp",
+            "wear": "../products_polo/beige_wear.webp",
+            "back": "../products_polo/beige_back.webp"
+        },
+        {
+            "name": "polo - blue",
+            "prijs": "90",
+            "front": "../products_polo/blue_front.webp",
+            "colour": "../products_polo/blue_colour.webp",
+            "wear": "../products_polo/blue_wear.webp",
+            "back": "../products_polo/blue_back.webp"
+        },
+        {
+            "name": "polo - navy",
+            "prijs": "90",
+            "front": "../products_polo/navy_front.webp",
+            "colour": "../products_polo/navy_colour.webp",
+            "wear": "../products_polo/navy_wear.webp",
+            "back": "../products_polo/navy_full.webp"
+        },
+        {
+            "name": "polo - pink",
+            "prijs": "90",
+            "front": "../products_polo/pink_front.webp",
+            "colour": "../products_polo/pink_colour.webp",
+            "wear": "../products_polo/pink_full.webp",
+            "back": "../products_polo/pink_fabrik.webp"
+        },
+        {
+            "name": "polo - red",
+            "prijs": "120",
+            "front": "../products_polo/red_front.webp",
+            "colour": "../products_polo/red_colour.webp",
+            "wear": "../products_polo/red_wear.webp",
+            "back": "../products_polo/red_back.webp"
+        },
+        {
+            "name": "polo - white",
+            "prijs": "210",
+            "front": "../products_polo/white_front.webp",
+            "colour": "../products_polo/white_colour.webp",
+            "wear": "../products_polo/white_wear.webp",
+            "back": "../products_polo/white_back.webp"
+        },
+        {
+            "name": "sweater - beige",
+            "prijs": "125",
+            "front": "../products_sweater/beige_front.webp",
+            "back": "../products_sweater/beige_back.webp",
+            "colour": "../products_sweater/beige_colour.webp",
+            "wear": "../products_sweater/beige_wear.webp"
+        },
+        {
+            "name": "sweater - blue",
+            "prijs": "90",
+            "front": "../products_sweater/blue_front.webp",
+            "back": "../products_sweater/blue_back.webp",
+            "colour": "../products_sweater/blue_colour.webp",
+            "wear": "../products_sweater/blue_wear.webp"
+        },
+        {
+            "name": "sweater - green",
+            "prijs": "90",
+            "front": "../products_sweater/green_front.webp",
+            "back": "../products_sweater/green_back.webp",
+            "colour": "../products_sweater/green_colour.webp",
+            "wear": "../products_sweater/green_wear.webp"
+        },
+        {
+            "name": "sweater - pink",
+            "prijs": "220",
+            "front": "../products_sweater/pink_front.webp",
+            "back": "../products_sweater/pink_back.webp",
+            "colour": "../products_sweater/pink_colour.webp",
+            "wear": "../products_sweater/pink_wear.webp"
+        },
+        {
+            "name": "sweater - puple",
+            "prijs": "90",
+            "front": "../products_sweater/purple_front.webp",
+            "back": "../products_sweater/purple_back.webp",
+            "colour": "../products_sweater/purple_colour.webp",
+            "wear": "../products_sweater/purple_wear.webp"
+        },
+        {
+            "name": "sweater - yellow",
+            "prijs": "220",
+            "front": "../products_sweater/yellow_front.webp",
+            "back": "../products_sweater/yellow_back.webp",
+            "colour": "../products_sweater/yellow_colour.webp",
+            "wear": "../products_sweater/yellow_wear.webp"
+        },
+        {
+            "name": "polo vrouwen - blue",
+            "prijs": "110",
+            "front": "../products_polo_vrouwen/blue_front.webp",
+            "back": "../products_polo_vrouwen/blue_back.webp",
+            "colour": "../products_polo_vrouwen/blue_colour.webp",
+            "wear": "../products_polo_vrouwen/blue_wear.webp",
+            "full": "../products_polo_vrouwen/blue_full.webp"
+        },
+        {
+            "name": "polo vrouwen - navy",
+            "prijs": "110",
+            "front": "../products_polo_vrouwen/navy_front.webp",
+            "back": "../products_polo_vrouwen/navy_back.webp",
+            "colour": "../products_polo_vrouwen/navy_colour.webp",
+            "wear": "../products_polo_vrouwen/navy_wear.webp",
+            "full": "../products_polo_vrouwen/navy_full.webp"
+        },
+        {
+            "name": "polo vrouwen - pink",
+            "prijs": "210",
+            "front": "../products_polo_vrouwen/pink_front.webp",
+            "back": "../products_polo_vrouwen/pink_back.webp",
+            "colour": "../products_polo_vrouwen/pink_colour.webp",
+            "wear": "../products_polo_vrouwen/pink_wear.webp",
+            "full": "../products_polo_vrouwen/pink_full.webp"
+        },
+        {
+            "name": "polo vrouwen - red",
+            "prijs": "110",
+            "front": "../products_polo_vrouwen/red_front.webp",
+            "back": "../products_polo_vrouwen/red_back.webp",
+            "colour": "../products_polo_vrouwen/red_colour.webp",
+            "wear": "../products_polo_vrouwen/red_wear.webp",
+            "full": "../products_polo_vrouwen/red_full.webp"
+        },
+        {
+            "name": "polo vrouwen - white",
+            "prijs": "85",
+            "front": "../products_polo_vrouwen/white_front.webp",
+            "back": "../products_polo_vrouwen/white_back.webp",
+            "colour": "../products_polo_vrouwen/white_colour.webp",
+            "wear": "../products_polo_vrouwen/white_wear.webp",
+            "full": "../products_polo_vrouwen/white_sit.webp"
+        }
+    ]
+}

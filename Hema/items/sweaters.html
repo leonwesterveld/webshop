@@ -7,56 +7,126 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>KAKKER - sweater </title>
-    <link rel="icon" type="image/x-icon" href="../img/logo.png" />
+    <link rel="icon" type="image/x-icon" href="../img/logo.webp" />
     <link rel="stylesheet" href="../css/headerfooter.css" />
     <link rel="stylesheet" href="../css/product.css" />
     <script src="https://kit.fontawesome.com/b273e788b2.js" crossorigin="anonymous"></script>
     <script src="../js/sweater.js" defer></script>
     <script src="../js/script.js" defer></script>
+    <script src="../js/winkelwagen.js" defer></script>
 </head>
 
 <body>
     <header>
         <div class="header-hamburger">
             <a class="logo--link" href="../index.html">
-                <img class="logo" src="../img/logo.png" alt="" />
+                <img class="logo" src="../img/logo.webp" alt="" />
             </a>
             <div id="myLinks">
-                <a href="/Hema/overview/items.html"><i class="fa-solid fa-layer-group" style="color: #000000;"></i> categorieën</a>
-                <a href="/Hema/overview/prijs.html"><i class="fa-solid fa-tag" style="color: #000000;"></i> prijs</a>
+                <a href="../overview/items.html"><i class="fa-solid fa-layer-group" style="color: #000000;"></i> categorieën</a>
+                <a href="../overview/prijs.html"><i class="fa-solid fa-tag" style="color: #000000;"></i> prijs</a>
             </div>
             <a class="bar" onclick="myFunction()"><i class="fa fa-bars"></i></a>
         </div>
 
         <div class="header-normal">
             <a class="logo--link" href="../index.html">
-                <img class="logo" src="../img/logo.png" alt="" />
+                <img class="logo" src="../img/logo.webp" alt="" />
             </a>
             <div class="items">
-                <a href="/Hema/overview/items.html"><i class="fa-solid fa-layer-group" style="color: #000000;"></i> categorieën</a>
-                <a href="/Hema/overview/prijs.html"><i class="fa-solid fa-tag" style="color: #000000;"></i> prijs</a>
+                <a href="../overview/items.html"><i class="fa-solid fa-layer-group" style="color: #000000;"></i> categorieën</a>
+                <a href="../overview/prijs.html"><i class="fa-solid fa-tag" style="color: #000000;"></i> prijs</a>
             </div>
         </div>
     </header>
 
+    <section class="checkout" id="checkoutWindow">
+        <ul class="checkout__list">
+            <li class="checkout__listItem">
+                <input class="checkboxes" type="checkbox">
+                <img class="checkout__image" src="../products_sweater/beige_front.webp" alt="">
+                <p class="checkout__title">beige</p>
+                <input class="numbers" type="number" min="0" max="20" value="0">
+                <p class="echte">€0,-  </p>
+            </li>
+            <li class="checkout__listItem">
+                <input class="checkboxes" type="checkbox">
+                <img class="checkout__image" src="../products_sweater/blue_front.webp" alt="">
+                <p class="checkout__title">blue</p>
+                <input class="numbers" type="number" min="0" max="20" value="0">
+                <p class="echte">€0,-  </p>
+            </li>
+            <li class="checkout__listItem">
+                <input class="checkboxes" type="checkbox">
+                <img class="checkout__image" src="../products_sweater/green_front.webp" alt="">
+                <p class="checkout__title">navy</p>
+                <input class="numbers" type="number" min="0" max="20" value="0">
+                <p class="echte">€0,-  </p>
+            </li>
+            <li class="checkout__listItem">
+                <input class="checkboxes" type="checkbox">
+                <img class="checkout__image" src="../products_sweater/pink_front.webp" alt="">
+                <p class="checkout__title">pink</p>
+                <input class="numbers" type="number" min="0" max="20" value="0">
+                <p class="echte">€0,-  </p>
+            </li>
+            <li class="checkout__listItem">
+                <input class="checkboxes" type="checkbox">
+                <img class="checkout__image" src="../products_sweater/purple_front.webp" alt="">
+                <p class="checkout__title">red</p>
+                <input class="numbers" type="number" min="0" max="20" value="0">
+                <p class="echte">€0,-  </p>
+            </li>
+            <li class="checkout__listItem">
+                <input class="checkboxes" type="checkbox">
+                <img class="checkout__image" src="../products_sweater/yellow_front.webp" alt="">
+                <p class="checkout__title">white</p>
+                <input class="numbers" type="number" min="0" max="20" value="0">
+                <p class="echte">€0,-  </p>
+            </li>
+        </ul>
+    </section>
+
+    <figure class="shoppingcard">
+        <button class="cart">
+            <i class="karretje fa-solid fa-cart-shopping fa-xl" style="color: #000000;">
+                    <figure class="aantal">
+                        <p id="item">0</p>
+                    </figure>
+            </i>
+            <i class="karretje fa-solid fa-arrow-left" style="display: none;"></i>
+        </button>
+    </figure>
     <main>
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+            <span id="close">×</span>
+            <div class="product__info">
+                <p>small</p>
+                <p class="veel">0x</p>
+                <p>medium</p>
+                <p class="veel">0x</p>
+                <p>large</p>
+                <p class="veel">0x</p>
+            </div>
+        </div>
         <article class="product">
             <section class="product__section product__section-1">
                 <div class="slideshow-container">
                     <figure class="mySlides fade">
-                        <img class="slides__pic" id="picture" src="../products_sweater/purple_front.webp" alt="" />
+                        <img class="slides__pic" id="picture" src="../products_sweater/yellow_front.webp" alt="">
                     </figure>
 
                     <figure class="mySlides fade">
-                        <img class="slides__pic" src="../products_sweater/purple_wear.webp" alt="" />
+                        <img class="slides__pic" src="../products_sweater/yellow_wear.webp" alt="">
                     </figure>
 
                     <figure class="mySlides fade">
-                        <img class="slides__pic" src="../products_sweater/purple_back.webp" alt="" />
+                        <img class="slides__pic" src="../products_sweater/yellow_colour.webp" alt="">
                     </figure>
 
                     <figure class="mySlides fade">
-                        <img class="slides__pic" src="../products_sweater/purple_colour.webp" alt="" />
+                        <img class="slides__pic" src="../products_sweater/yellow_back.webp" alt="">
                     </figure>
 
                     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -64,27 +134,19 @@
                 </div>
             </section>
             <section class="product__section product__section-2">
-                <figure class="shoppingcard">
-                    <a href="/Hema/shoppingcard/shoppingcart.html">
-                        <i class="karretje fa-solid fa-cart-shopping fa-xl" style="color: #000000;">
-                            <figure class="aantal">
-                                <p id="item">0</p>
-                            </figure>
-                        </i>
-                    </a>
-                </figure> 
-                <h1>polos</h1>
-                <form action="http://127.0.0.1:5500/Hema/sweaters/sweaters_beige.html">
+                
+                <h1>sweaters</h1>
+                <form action="">
                     <label for="sweater">Choose a color</label>
                     <select id="sweater" class="select__all" name="sweater">
-                        <option id="select_beige" value="beige">beige</option>
-                        <option id="select_blue" value="blue">blue</option>
-                        <option id="select_green" value="green">green</option>
-                        <option id="select_pink" value="pink">pink</option>
-                        <option selected id="select_purple" value="purple">purple</option>
-                        <option id="select_yellow" value="yellow">yellow</option>
+                        <option selected value="beige">beige</option>
+                        <option value="blue">blue</option>
+                        <option value="green">green</option>
+                        <option value="pink">pink</option>
+                        <option value="purple">purple</option>
+                        <option value="yellow">yellow</option>
                     </select>
-                </form>                   
+                </form>
                 <div class="sizes">
                     <button class="size" id="small">S</button>
                     <button class="size" id="medium">M</button>
@@ -93,16 +155,8 @@
                     
                     <button id="card">hoi</button>
 
-                    <!-- The Modal -->
-                    <div id="myModal" class="modal">
-                        <span id="close">×</span>
-                        <img class="modal-content" id="img01">
-                        <div class="product__info">
-                            <p id="grote" style="color: white;"></p>
-                            <button id="voeg">voeg to aan winkelmantje</button>
-                        </div>
-                    </div>
-                </div>  
+                </div>
+                <h4 class="price">€125,-</h4>
             </section>
             <section class="product__section product__section-3">
                 <h5 class="tielel">De "Comfort Chic" Sweater:</h5>
@@ -151,7 +205,7 @@
                             <a href="https://www.reddit.com/user/ConsciousBag4512"><img src="../icons/twitter.ico" alt=""></a>
                         </li>
                         <li>
-                            <a href="https://www.linkedin.com/in/leon-westerveld-aa5666277/"><img src="../icons/instagram.ico"
+                            <a href="https://www.linkedin.com/in/leon-westerveld-aa5666277/"><img src="../icons/linkedin.ico"
                                     alt=""></a>
                         </li>
                     </ul>

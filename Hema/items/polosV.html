@@ -7,60 +7,124 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>KAKKER - polo beige</title>
-    <link rel="icon" type="image/x-icon" href="../img/logo.png" />
+    <link rel="icon" type="image/x-icon" href="../img/logo.webp" />
     <link rel="stylesheet" href="../css/headerfooter.css" />
     <link rel="stylesheet" href="../css/product.css" />
     <script src="https://kit.fontawesome.com/b273e788b2.js" crossorigin="anonymous"></script>
     <script src="../js/polos_vrouwen.js" defer></script>
     <script src="../js/script.js" defer></script>
+    <script src="../js/winkelwagen.js" defer></script>
 </head>
 
 <body>
     <header>
         <div class="header-hamburger">
             <a class="logo--link" href="../index.html">
-                <img class="logo" src="../img/logo.png" alt="" />
+                <img class="logo" src="../img/logo.webp" alt="" />
             </a>
             <div id="myLinks">
-                <a href="/Hema/overview/items.html"><i class="fa-solid fa-layer-group" style="color: #000000;"></i> categorieën</a>
-                <a href="/Hema/overview/prijs.html"><i class="fa-solid fa-tag" style="color: #000000;"></i> prijs</a>
+                <a href="../overview/items.html"><i class="fa-solid fa-layer-group" style="color: #000000;"></i> categorieën</a>
+                <a href="../overview/prijs.html"><i class="fa-solid fa-tag" style="color: #000000;"></i> prijs</a>
             </div>
             <a class="bar" onclick="myFunction()"><i class="fa fa-bars"></i></a>
         </div>
 
         <div class="header-normal">
             <a class="logo--link" href="../index.html">
-                <img class="logo" src="../img/logo.png" alt="" />
+                <img class="logo" src="../img/logo.webp" alt="" />
             </a>
             <div class="items">
-                <a href="/Hema/overview/items.html"><i class="fa-solid fa-layer-group" style="color: #000000;"></i> categorieën</a>
-                <a href="/Hema/overview/prijs.html"><i class="fa-solid fa-tag" style="color: #000000;"></i> prijs</a>
+                <a href="../overview/items.html"><i class="fa-solid fa-layer-group" style="color: #000000;"></i> categorieën</a>
+                <a href="../overview/prijs.html"><i class="fa-solid fa-tag" style="color: #000000;"></i> prijs</a>
             </div>
         </div>
     </header>
 
+    <section class="checkout" id="checkoutWindow">
+        <ul class="checkout__list checkout__list-2">
+            <li class="checkout__listItem">
+                <input class="checkboxes" type="checkbox">
+                <img class="checkout__image" src="../products_polo_vrouwen/blue_front.webp" alt="">
+                <p class="checkout__title">beige</p>
+                <input class="numbers" type="number" min="0" max="20" value="0">
+                <p class="echte">€0,-  </p>
+            </li>
+            <li class="checkout__listItem">
+                <input class="checkboxes" type="checkbox">
+                <img class="checkout__image" src="../products_polo_vrouwen/navy_front.webp" alt="">
+                <p class="checkout__title">blue</p>
+                <input class="numbers" type="number" min="0" max="20" value="0">
+                <p class="echte">€0,-  </p>
+            </li>
+            <li class="checkout__listItem">
+                <input class="checkboxes" type="checkbox">
+                <img class="checkout__image" src="../products_polo_vrouwen/pink_front.webp" alt="">
+                <p class="checkout__title">navy</p>
+                <input class="numbers" type="number" min="0" max="20" value="0">
+                <p class="echte">€0,-  </p>
+            </li>
+            <li class="checkout__listItem">
+                <input class="checkboxes" type="checkbox">
+                <img class="checkout__image" src="../products_polo_vrouwen/red_front.webp" alt="">
+                <p class="checkout__title">pink</p>
+                <input class="numbers" type="number" min="0" max="20" value="0">
+                <p class="echte">€0,-  </p>
+            </li>
+            <li class="checkout__listItem">
+                <input class="checkboxes" type="checkbox">
+                <img class="checkout__image" src="../products_polo_vrouwen/white_front.webp" alt="">
+                <p class="checkout__title">red</p>
+                <input class="numbers" type="number" min="0" max="20" value="0">
+                <p class="echte">€0,-  </p>
+            </li>
+        </ul>
+    </section>
+
+    <figure class="shoppingcard">
+        <button class="cart">
+            <i class="karretje fa-solid fa-cart-shopping fa-xl" style="color: #000000;">
+                    <figure class="aantal">
+                        <p id="item">0</p>
+                    </figure>
+            </i>
+            <i class="karretje fa-solid fa-arrow-left" style="display: none;"></i>
+        </button>
+    </figure>
+    
     <main>
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+            <span id="close">×</span>
+            <div class="product__info">
+                <p>small</p>
+                <p class="veel">0x</p>
+                <p>medium</p>
+                <p class="veel">0x</p>
+                <p>large</p>
+                <p class="veel">0x</p>
+            </div>
+        </div>
         <article class="product">
             <section class="product__section product__section-1">
                 <div class="slideshow-container">
                     <figure class="mySlides fade">
-                        <img class="slides__pic" id="picture" src="../products_polo_vrouwen/white_front.webp" alt="">
+                        <img class="slides__pic" id="picture" src="../products_polo_vrouwen/pink_front.webp" alt="">
                     </figure>
 
                     <figure class="mySlides fade">
-                        <img class="slides__pic" src="../products_polo_vrouwen/white_wear.webp" alt="">
+                        <img class="slides__pic" src="../products_polo_vrouwen/pink_wear.webp" alt="">
                     </figure>
 
                     <figure class="mySlides fade">
-                        <img class="slides__pic" src="../products_polo_vrouwen/white_sit.webp" alt="">
+                        <img class="slides__pic" src="../products_polo_vrouwen/pink_colour.webp" alt="">
                     </figure>
 
                     <figure class="mySlides fade">
-                        <img class="slides__pic" src="../products_polo_vrouwen/white_back.webp" alt="">
+                        <img class="slides__pic" src="../products_polo_vrouwen/pink_back.webp" alt="">
                     </figure>
 
                     <figure class="mySlides fade">
-                        <img class="slides__pic" src="../products_polo_vrouwen/white_colour.webp" alt="">
+                        <img class="slides__pic" src="../products_polo_vrouwen/pink_full.webp" alt="">
                     </figure>
 
                     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -68,24 +132,15 @@
                 </div>
             </section>
             <section class="product__section product__section-2">
-                <figure class="shoppingcard">
-                    <a href="/Hema/shoppingcard/shoppingcart.html">
-                        <i class="karretje fa-solid fa-cart-shopping fa-xl" style="color: #000000;">
-                            <figure class="aantal">
-                                <p id="item">0</p>
-                            </figure>
-                        </i>
-                    </a>
-                </figure> 
                 <h1>polos</h1>
-                <form action="http://127.0.0.1:5500/Hema/polos/polos.html">
+                <form action="">
                     <label for="polo_v">Choose a color</label>
                     <select id="polo_v" class="select__all" name="polo_v">
-                        <option value="navy">navy</option>
                         <option value="blue">blue</option>
-                        <option selected value="white">white</option>
+                        <option value="navy">navy</option>
+                        <option selected value="pink">pink</option>
                         <option value="red">red</option>
-                        <option value="pink">pink</option>
+                        <option value="white">white</option>
                     </select>
                 </form>
                 <div class="sizes">
@@ -96,19 +151,18 @@
                     
                     <button id="card">hoi</button>
 
-                    <!-- The Modal -->
-                    <div id="myModal" class="modal">
-                        <span id="close">×</span>
-                        <img class="modal-content" id="img01">
-                        <div class="product__info">
-                            <p id="grote" style="color: white;"></p>
-                            <button id="voeg">voeg to aan winkelmantje</button>
-                        </div>
-                    </div>
                 </div>
+                <h4 class="price">€110,-</h4>
             </section>
             <section class="product__section product__section-3">
-                <h5>hello</h5>
+                <h5 class="tielel">Stijlvol en veelzijdig: </h5>
+                <p class="beschrijving">Een vrouwen polo is een tijdloos kledingstuk dat geschikt is voor verschillende gelegenheden. 
+                    Of je nu een casual outfit wilt samenstellen voor een dagje uit of 
+                    een meer geklede look wilt creëren voor een informele zakelijke bijeenkomst, een polo past altijd.
+
+                    Vrouwen polo's zijn meestal gemaakt van hoogwaardige materialen zoals katoen of katoenmixen, 
+                    waardoor ze comfortabel zijn om te dragen, zelfs op warmere dagen. 
+                    Het ademende materiaal zorgt ervoor dat je je fris en comfortabel voelt, zelfs als je actief bezig bent.</p>
             </section>
         </article>
     </main>
@@ -144,7 +198,7 @@
                             <a href="https://www.reddit.com/user/ConsciousBag4512"><img src="../icons/twitter.ico" alt=""></a>
                         </li>
                         <li>
-                            <a href="https://www.linkedin.com/in/leon-westerveld-aa5666277/"><img src="../icons/instagram.ico"
+                            <a href="https://www.linkedin.com/in/leon-westerveld-aa5666277/"><img src="../icons/linkedin.ico"
                                     alt=""></a>
                         </li>
                     </ul>

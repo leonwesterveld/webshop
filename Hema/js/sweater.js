@@ -1,97 +1,82 @@
 let sweater = document.getElementById("sweater");
+let prijs = document.getElementsByClassName("price")[0];
 
-sweater.onchange = (event) => {
-    event.preventDefault();
+const images = document.getElementsByClassName("slides__pic");
 
-    value_sweater = sweater.value;
-    switch (value_sweater) {
-        case "green":
-            window.location.href = "sweaters_green.html";
-            break;
-        
-        case "blue":
-            window.location.href = "sweaters_blue.html";
-            break;
-
-        case "yellow":
-            window.location.href = "sweaters_yellow.html";
-            break;
-
-        case "pink":
-            window.location.href = "sweaters_pink.html";
-            break;
-
-        case "purple":
-            window.location.href = "sweaters_purple.html";
-            break;
-
-        case "beige":
-            window.location.href = "sweaters_beige.html";
-            break;
-
-        default:
-    }
-};
-
-let small = document.getElementById('small');
-let medium = document.getElementById("medium");
-let large = document.getElementById('large');
-
-let size = "hoi"
-
-var modal = document.getElementById("myModal");
-let picture = document.getElementById("picture").src;
-var voeg = document.getElementById('voeg');
-var grote = document.getElementById('grote');
-var img = document.getElementById("card");
-var modalImg = document.getElementById("img01");
-var closing = document.getElementById("close");
-var item = document.getElementById("item");
+fetch("../product.json")
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (data) {
 
 
-small.onclick = function () {
-    small.style.background = "#ff9898";
-    medium.style.background = "buttonface";
-    large.style.background = "buttonface";
-    size = "small"
-    console.log(size);
-    img.onclick = function(){
-        modal.style.display = "flex";
-        modalImg.src = picture;
-        grote.innerHTML = size;
-    }
-}
-medium.onclick = function () {
-    small.style.background = "buttonface";
-    medium.style.background = "#ff9898";
-    large.style.background = "buttonface";
-    size = "medium"
-    console.log(size);
-    img.onclick = function(){
-        modal.style.display = "flex";
-        modalImg.src = picture;
-        grote.innerHTML = size;
-    }
-}
-large.onclick = function () {
-    small.style.background = "buttonface";
-    medium.style.background = "buttonface";
-    large.style.background = "#ff9898";
-    size = "large"
-    console.log(size);
-    img.onclick = function(){
-        modal.style.display = "flex";
-        modalImg.src = picture;
-        grote.innerHTML = size;
-    }
-}
+        sweater.onchange = (event) => {
+            event.preventDefault();
 
-closing.onclick = function() { 
-    modal.style.display = "none"; 
-}   
+            value = sweater.value;
+            switch (value) {
+                case "beige":
+                    for (let i = 0; i < images.length; i++) {
+                        images[0].setAttribute("src", data.information[6].front);
+                        images[1].setAttribute("src", data.information[6].wear);
+                        images[2].setAttribute("src", data.information[6].colour);
+                        images[3].setAttribute("src", data.information[6].back);
+                        prijs.innerHTML = "€" + data.information[6].prijs + ",-";
+                        
+                    }
+                    break;
 
-let aantal = 1;
-voeg.onclick = function() {
-    modal.style.display = "none"; 
-    item.innerHTML = aantal ++;
-}
+                case "blue":
+                    for (let i = 0; i < images.length; i++) {
+                        images[0].setAttribute("src", data.information[7].front);
+                        images[1].setAttribute("src", data.information[7].wear);
+                        images[2].setAttribute("src", data.information[7].colour);
+                        images[3].setAttribute("src", data.information[7].back);
+                        prijs.innerHTML = "€" + data.information[7].prijs + ",-";
+                    }
+                    break;
+
+                case "green":
+                    for (let i = 0; i < images.length; i++) {
+                        images[0].setAttribute("src", data.information[8].front);
+                        images[1].setAttribute("src", data.information[8].wear);
+                        images[2].setAttribute("src", data.information[8].colour);
+                        images[3].setAttribute("src", data.information[8].back);
+                        prijs.innerHTML = "€" + data.information[8].prijs + ",-";
+                    }
+                    break;
+
+                case "pink":
+                    for (let i = 0; i < images.length; i++) {
+                        images[0].setAttribute("src", data.information[9].front);
+                        images[1].setAttribute("src", data.information[9].wear);
+                        images[2].setAttribute("src", data.information[9].colour);
+                        images[3].setAttribute("src", data.information[9].back);
+                        prijs.innerHTML = "€" + data.information[9].prijs + ",-";
+                    }
+                    break;
+
+                case "purple":
+                    for (let i = 0; i < images.length; i++) {
+                        images[0].setAttribute("src", data.information[10].front);
+                        images[1].setAttribute("src", data.information[10].wear);
+                        images[2].setAttribute("src", data.information[10].colour);
+                        images[3].setAttribute("src", data.information[10].back);
+                        prijs.innerHTML = "€" + data.information[10].prijs + ",-";
+                    }
+                    break;
+
+                case "yellow":
+                    for (let i = 0; i < images.length; i++) {
+                        images[0].setAttribute("src", data.information[11].front);
+                        images[1].setAttribute("src", data.information[11].wear);
+                        images[2].setAttribute("src", data.information[11].colour);
+                        images[3].setAttribute("src", data.information[11].back);
+                        prijs.innerHTML = "€" + data.information[11].prijs + ",-";
+                    }
+                    break;
+                default:
+            }
+        };
+
+    });

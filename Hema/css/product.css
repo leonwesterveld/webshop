@@ -31,6 +31,115 @@ button{
     cursor: pointer;
 }
 
+/* cart */
+
+
+.checkout{
+    width: 100%;
+    height: 80%;
+    background: var(--polo-background);
+    padding: 4rem;
+    display: none;
+}
+
+.checkout__list{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: repeat(6, 15rem);
+    gap: 1rem;
+}
+.checkout__list-2{
+    grid-template-rows: repeat(5, 15rem);
+}
+
+.checkout__listItem{
+    list-style: none;
+    grid-row: span 1;
+    border: .1rem solid rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    padding:  0 8rem;
+    gap: 3rem;
+}
+
+.checkboxes{
+    appearance: none;
+    height: 2rem;
+    width: 2rem;
+    background: #ff6767;
+}
+
+.checkboxes:hover{
+    cursor: pointer;
+}
+
+.checkboxes:checked{
+    background: #69a8ff;
+}
+.checkboxes:checked::after{
+    content: "\2713";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.checkout__image{
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+    padding: 1rem;
+}
+.checkout__title{
+    margin-right: auto;
+}
+
+.echte{
+    width: 10rem;
+}
+
+
+
+
+
+.shoppingcard{
+    position: fixed;
+    right: 1%;
+    top: 15%;
+    z-index: 2;
+    
+}
+.karretje{
+    position: relative;
+}
+.aantal{
+    position: absolute;
+    bottom: 120%;
+    right: -20%;
+    background: #fe7f7f;
+    height: 2rem;
+    width: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+#item{
+    font-size: 1rem;
+}
+
+.cart{
+    color: #000000;
+    border: none;
+    background: none;
+    font-size: 2.5rem;
+}
+
+
+
+
 /* main */
 .product {
     display: grid;
@@ -131,7 +240,6 @@ button{
 }
 
 .product__section-2 {
-    position: relative;
     grid-column: 2/3;
     grid-row: 1/2;
     display: flex;
@@ -141,30 +249,7 @@ button{
 }
 
 
-.shoppingcard{
-    position: absolute;
-    right: 0;
-    top: 0;
     
-}
-.karretje{
-    position: relative;
-}
-.aantal{
-    position: absolute;
-    bottom: 120%;
-    right: -20%;
-    background: #fe7f7f;
-    height: 2rem;
-    width: 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-}
-#item{
-    font-size: 1rem;
-}
 
 
 .select__all {
@@ -177,9 +262,6 @@ option {
     border-radius: 1px;
 }
 
-option:checked {
-    display: none;
-}
 
 .sizes {
     display: flex;
@@ -209,17 +291,19 @@ option:checked {
 
 .modal {
     display: none;
+    align-items: flex-start;
+    gap: 4rem;
     position: fixed;
-    z-index: 1;
-    padding: 4rem;
-    left: 50%;
-    top: 20%;
-    transform: translateX(-50%);
-    width: 80rem;
-    height: 40rem;
-    background: #ffbebe;
-    border: solid gray .2rem;
-
+    z-index: 3;
+    padding: 2rem;
+    right: 0;
+    width: 20%;
+    min-height: 100%;
+    background: #ffffff;
+    border: solid gray .1rem;
+    animation-name: cart;
+    animation-duration: .8s;
+    animation-fill-mode: backwards;
 }
 
 /* Modal Content (image) */
@@ -232,7 +316,7 @@ option:checked {
 .product__info{
     display: flex;
     flex-direction: column;
-    padding: 2rem;
+    padding: 1rem;
     justify-content: space-between;
     width: 100%;
 }
@@ -275,12 +359,23 @@ option:checked {
     }
 }
 
+@keyframes cart {
+    from{
+        opacity: 0;
+        transform: translateX(2rem);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 /* The Close Button */
 #close {
     position: absolute;
     top: 15px;
     right: 35px;
-    color: #f1f1f1;
+    color: #9d9d9d;
     font-size: 40px;
     font-weight: bold;
     transition: 0.3s;
@@ -288,7 +383,7 @@ option:checked {
 
 #close:hover,
 #close:focus {
-    color: #858585;
+    color: #1b1b1b;
     text-decoration: none;
     cursor: pointer;
 }
@@ -314,6 +409,17 @@ option:checked {
     font-weight: 600;
 }
 @media screen and (max-width: 80rem) {
+    .shoppingcard{
+        top: 20%;
+        right: 2%;
+    }
+    .aantal{
+        height: 1rem;
+        width: 1rem;
+    }
+    .cart{
+        font-size: 1.5rem;
+    }
     .tielel {
         font-size: 2.5rem;
     }
@@ -323,6 +429,15 @@ option:checked {
     }
 }
 @media screen and (max-width: 62.5rem) {
+    .aantal{
+        bottom: 450%;
+        height: 1.5rem;
+        width: 1.5rem;
+    }
+
+    .cart{
+        font-size: 2rem;
+    }
     .product {
         margin: 4rem;
         grid-template-columns: 50% 50%;
@@ -334,9 +449,74 @@ option:checked {
     .beschrijving {
         font-size: 1rem;
     }
+    p{
+        font-size: 1rem;
+    }
+    #close {
+        top: 0;
+        right: 1rem;
+        font-size: 2rem;
+    }
+    .modal {
+        gap: 1rem;
+        position: fixed;
+        z-index: 1;
+        padding: 0;
+    }
+
+    .checkout{
+        padding: 2rem;
+    }
+    
+    .checkout__list{
+        grid-template-rows: repeat(6, 10rem);
+        gap: .5rem;
+    }
+    .checkout__list-2{
+        grid-template-rows: repeat(5, 10rem);
+    }
+    
+    .checkout__listItem{
+        padding:  0 4rem;
+        gap: 3rem;
+    }
+    
+    .checkboxes{
+        height: 1rem;
+        width: 1rem;
+    }
+    .checkboxes:checked::after{
+        font-size: .7rem;
+    }
+    
+    .checkout__image{
+        padding: .5rem;
+    }
+    .checkout__title{
+        margin-right: auto;
+    }
+    .numbers{
+        width: 3.5rem;
+        height: 1.5rem;
+    }
+    
+    .echte{
+        width: 4rem;
+    }
 }
 
 @media screen and (max-width: 50rem) {
+    .shoppingcard{
+        top: 20%;
+        right: 2%;
+    }
+    .aantal{
+        height: 1rem;
+        width: 1rem;
+    }
+    .cart{
+        font-size: 1.5rem;
+    }
     .product {
         margin: 0 2rem 1rem;
         grid-template-columns: 100%;
@@ -370,5 +550,28 @@ option:checked {
 
     .beschrijving {
         font-size: 0.5rem;
+    }
+
+    .checkout{
+        padding: 1rem;
+    }
+    
+    .checkout__list{
+        grid-template-rows: repeat(6, 6rem);
+    }
+    .checkout__list{
+        grid-template-rows: repeat(5, 6rem);
+    }
+    
+    .checkout__listItem{
+        padding:  0 3rem;
+        gap: 2rem;
+    }
+    .checkout__image{
+        padding: .3rem;
+    }
+    
+    .echte{
+        width: 2rem;
     }
 }

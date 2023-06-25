@@ -28,19 +28,3 @@ li {
     list-style: none;
 }
 
-main{
-    padding: 3rem;
-    height: 100%;
-}
-
-article{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: 3rem;
-}
-
-section{
-    background-color: red;
-    height: 20rem;
-    width: 100%;
-}
