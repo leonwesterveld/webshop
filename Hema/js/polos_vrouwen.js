@@ -1,76 +1,39 @@
 let polo = document.getElementById("polo_v");
 let prijs = document.getElementsByClassName("price")[0];
-
 const images = document.getElementsByClassName("slides__pic");
 
+const colorInfo = {
+    blue: {
+        index: 12,
+        images: ["front", "wear", "colour", "back", "full"]
+    },
+    navy: {
+        index: 13,
+        images: ["front", "wear", "colour", "back", "full"]
+    },
+    pink: {
+        index: 14,
+        images: ["front", "wear", "colour", "back", "full"]
+    },
+    red: {
+        index: 15,
+        images: ["front", "wear", "colour", "back", "full"]
+    },
+    white: {
+        index: 16,
+        images: ["front", "wear", "colour", "back", "full"]
+    }
+};
+
 fetch("../product.json")
-    .then(function (response) {
-        return response.json();
-    })
-    .then(function (data) {
-
-
-        polo.onchange = (event) => {
-            event.preventDefault();
-
-            value = polo.value;
-            switch (value) {
-                case "blue":
-                    for (let i = 0; i < images.length; i++) {
-                        images[0].setAttribute("src", data.information[12].front);
-                        images[1].setAttribute("src", data.information[12].wear);
-                        images[2].setAttribute("src", data.information[12].colour);
-                        images[3].setAttribute("src", data.information[12].back);
-                        images[4].setAttribute("src", data.information[12].full);
-                        prijs.innerHTML = "€" + data.information[12].prijs + ",-";
-                        
-                    }
-                    break;
-                
-                case "navy":
-                    for (let i = 0; i < images.length; i++) {
-                        images[0].setAttribute("src", data.information[13].front);
-                        images[1].setAttribute("src", data.information[13].wear);
-                        images[2].setAttribute("src", data.information[13].colour);
-                        images[3].setAttribute("src", data.information[13].back);
-                        images[4].setAttribute("src", data.information[13].full);
-                        prijs.innerHTML = "€" + data.information[13].prijs + ",-";
-                    }
-                    break;
-
-                case "pink":
-                    for (let i = 0; i < images.length; i++) {
-                        images[0].setAttribute("src", data.information[14].front);
-                        images[1].setAttribute("src", data.information[14].wear);
-                        images[2].setAttribute("src", data.information[14].colour);
-                        images[3].setAttribute("src", data.information[14].back);
-                        images[4].setAttribute("src", data.information[14].full);
-                        prijs.innerHTML = "€" + data.information[14].prijs + ",-";
-                    }
-                    break;
-
-                case "red":
-                    for (let i = 0; i < images.length; i++) {
-                        images[0].setAttribute("src", data.information[15].front);
-                        images[1].setAttribute("src", data.information[15].wear);
-                        images[2].setAttribute("src", data.information[15].colour);
-                        images[3].setAttribute("src", data.information[15].back);
-                        images[4].setAttribute("src", data.information[15].full);
-                        prijs.innerHTML = "€" + data.information[15].prijs + ",-";
-                    }
-                    break;
-                    
-                case "white":
-                    for (let i = 0; i < images.length; i++) {
-                        images[0].setAttribute("src", data.information[16].front);
-                        images[1].setAttribute("src", data.information[16].wear);
-                        images[2].setAttribute("src", data.information[16].colour);
-                        images[3].setAttribute("src", data.information[16].back);
-                        images[4].setAttribute("src", data.information[16].full);
-                        prijs.innerHTML = "€" + data.information[16].prijs + ",-";
-                    }
-                    break;
+    .then(response => response.json())
+    .then(data => {
+        polo.onchange = function() {
+            const value = polo.value;
+            const color = colorInfo[value];
+            for (let i = 0; i < images.length; i++) {
+                images[i].setAttribute("src", data.information[color.index][color.images[i]]);
             }
+            prijs.innerHTML = "€" + data.information[color.index].prijs + ",-";
         };
-
-    });
+    }); 
